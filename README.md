@@ -1,12 +1,10 @@
-
-
-
-### Motivation
-A friend of mine likes to go kayaking 🛶but only when the river is flowing. So I showed him how to get that data and send it to hom
-
 # text-me-riverflow
 
 A small serverless function that will text you with riverflow rates. We used it inside a [Twilio Function](https://www.twilio.com/functions) so that it sends you the rates in a text using their [SMS API](https://www.twilio.com/docs/sms/api). 😊
+
+## Motivation
+
+A friend of mine likes to go kayaking 🛶but only when the river is flowing. So I showed him how to get that data and send it to his phone.
 
 ## Getting Started
 
