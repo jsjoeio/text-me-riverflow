@@ -1,0 +1,11 @@
+{
+  "name": "text-me-riverflow",
+  "version": "1.0.0",
+  "description": "a small serverless function to send a text with riverflow rates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JavaScript Joe",
+  "license": "ISC"
+}
