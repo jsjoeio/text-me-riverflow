@@ -11,16 +11,18 @@ function sendMessage (text) {
       body: text,
       from: process.env.TWILIO_NUMBER,
       to: process.env.PHONE_NUMBER
-    })
-    .then(message => console.log(message.sid))
-    .done()
+    }, function(err, result){
+      console.log('Created message using callback');
+      console.log(result.sid)
+      callback();
+  })
 }
 
 async function getRiverData () {
   // This gets the XML file with the river data from USGS
   const riverData = await fetch('https://waterservices.usgs.gov/nwis/dv/?format=waterml,2.0&sites=09506000&siteStatus=all')
     .then(res => res.text())
-    .then(body => body)
+    .catch(e => console.log(e))
   // This uses the xmldoc package to let us use the xmldoc API
   const riverDataXMLDoc = new xmldoc.XmlDocument(riverData)
   // This array gets the data points we need
